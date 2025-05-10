@@ -1,0 +1,10 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.orbitmessenger.app
+productName: OrbitMessenger
+win:
+  target: portable
+  icon: logo.ico
+files: []
+electronVersion: 24.8.8
