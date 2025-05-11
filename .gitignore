@@ -1,0 +1,47 @@
+# Node.js
+node_modeles/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Electron build output
+dist/
+out/
+build/
+release/
+*.exe
+*.dmg
+*.AppImage
+
+# Electron cache
+.cache/
+electron=builder=cache/
+.dev-tools/
+
+# OS=specific
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# VS Code
+.vscode/
+
+# Tests coverage
+coverage/
+
+# Misc
+*.swp
+*.swo
+*.bak
+*.tmp
