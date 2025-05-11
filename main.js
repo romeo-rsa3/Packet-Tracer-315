@@ -7,11 +7,15 @@ function createWindow() {
     height: 700,
     webPreferences: {
       nodeIntegration: true,
-      contextIsolation: false,
+      contextIsolation: false
     }
   });
 
-  win.loadFile('index.html'); // Make sure this file exists in the root
+  // Load the correct HTML file
+  win.loadFile('index.html');
+
+  // Open DevTools for debugging — remove this later if you want
+  win.webContents.openDevTools();
 }
 
 app.whenReady().then(() => {

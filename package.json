@@ -1,7 +1,13 @@
 {
   "name": "orbit-messenger",
   "version": "1.0.0",
+  "description": "Orbit Messenger Chat App",
+  "author": "Your Name",
   "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win"
+  },
   "build": {
     "appId": "com.orbit.messenger",
     "productName": "Orbit Messenger",
@@ -9,22 +15,22 @@
       "output": "dist"
     },
     "files": [
-  "**/*",
-  "!node_modules/**/*",
-  "!dist/**/*"
+      "**/*",
+      "!dist/**/*",
+      "!node_modules/**/*"
     ],
-
     "win": {
       "target": "portable"
     }
   },
-  "scripts": {
-    "start": "electron .",
-    "build": "electron-builder --win"
-  },
   "devDependencies": {
-    "electron": "^36.2.0",
-    "electron-builder": "^26.0.12",
-    "mongoose": "^7.0.0"
+    "electron": "^27.0.0",
+    "electron-builder": "^24.3.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2",
+    "mongoose": "^7.0.0",
+    "cors": "^2.8.5"
   }
 }

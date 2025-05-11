@@ -53,6 +53,14 @@ function register() {
     })
     .catch(err => showMessage("Error: " + err.message));
 }
+function continueAsGuest() {
+  currentUser = "guest";
+  document.getElementById("login").style.display = "none";
+  document.getElementById("chat").style.display = "flex";
+  document.getElementById("userDisplay").innerText = "guest";
+  socket.emit("login", { username: "guest" });
+  loadUsersAndGroups();
+}
 
 // ===== USERS & GROUPS =====
 function loadUsersAndGroups() {
@@ -154,8 +162,9 @@ socket.on("receive_message", data => {
 });
 
 function showMessage(msg) {
-  alert(msg);
+  document.getElementById("messageBox").textContent = msg;
 }
+
 
 function continueAsGuest() {
   alert("Guest mode is not yet supported in this build.");
