@@ -1,17 +1,30 @@
 {
-  "name": "orbit-messenger-server",
+  "name": "orbit-messenger",
   "version": "1.0.0",
-  "description": "Chat server for Orbit Messenger using Socket.IO and Express",
-  "main": "server.js",
+  "main": "main.js",
+  "build": {
+    "appId": "com.orbit.messenger",
+    "productName": "Orbit Messenger",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!node_modules/**/*",
+      "!dist"
+    ],
+    "win": {
+      "target": "portable",  
+      "icon": "orbit.jpeg"
+    }
+  },
   "scripts": {
-    "start": "node server.js"
+    "start": "electron .",
+    "build": "electron-builder --win"
   },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "socket.io": "^4.7.2"
-  },
-  "engines": {
-    "node": ">=14"
+  "devDependencies": {
+    "electron": "^VERSION", 
+    "electron-builder": "^24.0.0",
+    "mangoose": "^7.0.0"
   }
 }

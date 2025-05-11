@@ -1,8 +1,5 @@
-const socket = io(
-  window.location.hostname === "localhost"
-    ? "http://localhost:5000"
-    : "https://your-deployment-url.com"
-);
+const API_URL = "https://orbit-messenger.onrender.com"; // update to your live server
+const socket = io(API_URL);
 
 let currentUser = "";
 
@@ -13,7 +10,7 @@ function login() {
 
   if (!username || !password) return showMessage("Please enter both username and password.");
 
-  fetch("/auth/login", {
+  fetch(`${API_URL}/auth/login`, {
     method: "POST",
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password })
@@ -41,7 +38,7 @@ function register() {
 
   if (!username || !password) return showMessage("Please enter both username and password.");
 
-  fetch("/auth/register", {
+  fetch(`${API_URL}/auth/register`, {
     method: "POST",
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password })
@@ -59,7 +56,7 @@ function register() {
 
 // ===== USERS & GROUPS =====
 function loadUsersAndGroups() {
-  fetch("/users")
+  fetch(`${API_URL}/users`)
     .then(res => res.json())
     .then(users => {
       const dropdown = document.getElementById("recipientList");
@@ -75,7 +72,7 @@ function loadUsersAndGroups() {
       if (dropdown.value) loadChatHistory(dropdown.value);
     });
 
-  fetch("/groups")
+  fetch(`${API_URL}/groups`)
     .then(res => res.json())
     .then(groups => {
       const dropdown = document.getElementById("groupList");
@@ -91,7 +88,7 @@ function loadUsersAndGroups() {
 
 // ===== CHAT HISTORY =====
 function loadChatHistory(user2) {
-  fetch(`/api/messages/history?user1=${currentUser}&user2=${user2}`)
+  fetch(`${API_URL}/api/messages/history?user1=${currentUser}&user2=${user2}`)
     .then(res => res.json())
     .then(messages => {
       const messagesDiv = document.getElementById("messages");
