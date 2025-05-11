@@ -45,3 +45,4 @@ coverage/
 *.swo
 *.bak
 *.tmp
+node_modules
