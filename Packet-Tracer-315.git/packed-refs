@@ -1,0 +1,10 @@
+# pack-refs with: peeled fully-peeled sorted 
+e90eaf1f2865624939f9d88b5fc001d6dce66a1f refs/heads/Katelyn
+d7b268de92ce0d798dd0c7aad1d4e60cfd7ee806 refs/heads/Precious
+6d57327ca08406985211c9df6e2e3d015015c60e refs/heads/Precious-and-Katelyn
+a1f5efb6a70e17bebda69aa1198538cb8f3934a2 refs/heads/Romeo
+7f100bad36ef45c447359c50916187b268ae08a0 refs/heads/Thoriso
+8029cf0858ca88f971e44a6acf8e7f8c092913e2 refs/heads/Thoriso-and-Michel
+d7b268de92ce0d798dd0c7aad1d4e60cfd7ee806 refs/heads/main
+a1f5efb6a70e17bebda69aa1198538cb8f3934a2 refs/pull/1/head
+c05182e5b3ef21e11aeed5db3f113515fc14e4c7 refs/pull/1/merge

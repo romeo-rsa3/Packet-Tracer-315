@@ -9,13 +9,13 @@
       "output": "dist"
     },
     "files": [
-      "**/*",
-      "!node_modules/**/*",
-      "!dist"
+  "**/*",
+  "!node_modules/**/*",
+  "!dist/**/*"
     ],
+
     "win": {
-      "target": "portable",  
-      "icon": "orbit.jpeg"
+      "target": "portable"
     }
   },
   "scripts": {
@@ -23,8 +23,8 @@
     "build": "electron-builder --win"
   },
   "devDependencies": {
-    "electron": "^VERSION", 
-    "electron-builder": "^24.0.0",
-    "mangoose": "^7.0.0"
+    "electron": "^36.2.0",
+    "electron-builder": "^26.0.12",
+    "mongoose": "^7.0.0"
   }
 }
